@@ -1,9 +1,9 @@
 from flask import Blueprint, request
-from controllers.produto_controllers import create_produto
+from controllers.filme_controllers import create_filme
 
-produto_routes = Blueprint('produto_routes', __name__)
+filme_routes = Blueprint('filme_routes', __name__)
 
-@produto_routes.route('/produto', methods=['POST'])
-def produto_post():
-    produto_data = request.json
-    return create_produto(request.json)
+@filme_routes.route('/filme', methods=['POST'])
+def filme_post():
+    filme_data = request.json
+    return create_filme(request.json)
